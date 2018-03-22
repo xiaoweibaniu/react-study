@@ -2,17 +2,16 @@
  * Created by JustinWu on 2017/11/30.
  */
 /**
- * ÕâÊÇÈë¿ÚÎÄ¼þ£¬ Ò²¾ÍÊÇÐèÒª´ò°üµÄÎÄ¼þ
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
  */
 
 import React from 'react'
 
 import { render } from 'react-dom'
 
-// ÒýÓÃtodo×é¼þ
 import Todo from './container/Todo'
 
 render (
     <Todo/>,
-    document.getElementById("app")
+	document.getElementById('root')
 );

@@ -3,7 +3,7 @@
  */
 
 /**
- * ÕâÊÇÖÇÄÜ×é¼þ  ¾ÍÊÇÄÜ´¦Àí²Ù×÷Êý¾ÝµÄ×é¼þ ¶¨ÒåÊý¾ÝµÄ¹æÔò
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½Ü´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ýµï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÝµÄ¹ï¿½ï¿½ï¿½
  */
 import React from 'react'
 
@@ -14,7 +14,6 @@ class Todo extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
-            // ÉùÃ÷×´Ì¬±£´æÊý¾Ý
             todos: []
         }
     }
@@ -22,7 +21,6 @@ class Todo extends React.Component {
     render() {
         return(
             <div>
-                /*Ìí¼ÓsubmitFun */
                 <Input submitFun={this.submitFun.bind(this)}/>
                 <List todos={this.state.todos} deleteFun={this.deleteFun.bind(this)}/>
             </div>
