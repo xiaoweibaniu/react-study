@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import PublicHeader from '@/components/header/header.jsx'
+import TouchBtn from '@/components/touchBtn/touchBtn.jsx'
 /*import {saveFormData, saveImg, clearData} from '@/store/home/action';*/
 /*import {clearSelected} from '@/store/production/action';*/
 import mixin, {padStr} from '@/utils/mixin';
@@ -25,6 +26,11 @@ export default class Home extends Component {
 		this.props.saveFormData(value, type);
 	}
 
+	// 表单提交
+	submitForm = ()=>{
+		alert('状态数据待完善');
+	}
+
 	render() {
 		return (
 			<main className="home-container">
@@ -38,11 +44,13 @@ export default class Home extends Component {
 					</div>
 					<div className="home-form-item">
 						<span>客户姓名：</span>
-						<input type="text" placeholder="请输入客户姓名" value="" onChange={this.handleInput.bind(this,'name')}/>
+						<input type="text" placeholder="请输入客户姓名" value=""
+						       onChange={this.handleInput.bind(this, 'name')}/>
 					</div>
 					<div className="home-form-item">
 						<span>客户电话：</span>
-						<input type="text" maxLength="13" placeholder="请输入客户电话" value="" onChange={this.handleInput.bind(this,'phoneNo')}/>
+						<input type="text" maxLength="13" placeholder="请输入客户电话" value=""
+						       onChange={this.handleInput.bind(this, 'phoneNo')}/>
 					</div>
 				</form>
 				<div>
@@ -57,6 +65,7 @@ export default class Home extends Component {
 					</div>
 					<img src="" className="select-img" alt=""/>
 				</div>
+				<TouchBtn  className="submit-btn" text="提交" clickCallBack={this.submitForm}/>
 			</main>
 		)
 	}

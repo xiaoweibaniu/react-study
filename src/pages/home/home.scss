@@ -41,21 +41,29 @@
       }
     }
   }
-  .upload-img-con{
-    text-align:center;
-    .file-lable{
-      position:relative;
-      input[type="file"]{
-        position:absolute;
-        @include wh(100%,100%);
-        background-color:red;
-        top:0;
-        right:0;
-        opacity:0;
+  .upload-img-con {
+    text-align: center;
+    .file-lable {
+      position: relative;
+      input[type="file"] {
+        position: absolute;
+        @include wh(100%, 100%);
+        background-color: red;
+        top: 0;
+        right: 0;
+        opacity: 0;
       }
     }
-    .select-img{
-      margin-top:10px;
+    .select-img {
+      margin-top: 10px;
     }
+  }
+  .submit-btn {
+    width: 90%;
+    margin: 50px auto 0;
+    border-radius: 10px;
+    line-height: 100px;
+    @include font(40px, #fff, center);
+    background-color: $base-color;
   }
 }
