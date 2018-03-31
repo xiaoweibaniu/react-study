@@ -4,7 +4,22 @@
     [
       "env",
       {
-        "modules": false
+        "modules": false,
+        "targets": {
+          "browsers": ">=5%"
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    "syntax-dynamic-import",
+    [
+      "transform-runtime",
+      {
+        "helpers": false,
+        "polyfill": false,
+        "regenerator": true,
+        "moduleName": "babel-runtime"
       }
     ]
   ]

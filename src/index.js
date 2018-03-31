@@ -1,17 +1,36 @@
-/**
- * Created by JustinWu on 2017/11/30.
- */
-/**
- * ��������ļ��� Ҳ������Ҫ������ļ�
- */
-
 import React from 'react'
+import ReactDOM from 'react-dom'
+import Route from './router'
+import FastClick from 'fastclick'
+import {AppContainer} from 'react-hot-loader'
+import {Provider} from 'react-redux'
+import store from '@/store/store'
+import './style/base.css'
+import '@/utils/setRem.js'
 
-import { render } from 'react-dom'
+FastClick.attach(document.body)
 
-import Todo from './container/Todo'
+// 监听state变化
+store.subscribe(()=>{
+	console.log('state')
+})
 
-render (
-    <Todo/>,
-	document.getElementById('root')
-);
+const render = Component => {
+	ReactDOM.render(
+		<Provider store={store}>
+			<AppContainer>
+				<Component/>
+			</AppContainer>
+		</Provider>,
+		document.getElementById('root')
+	)
+}
+
+render(Route)
+
+// Webpack Hot Module Replacement API
+if (module.hot) {
+	module.hot.accept('./router', () => {
+		render(Route)
+	})
+}
