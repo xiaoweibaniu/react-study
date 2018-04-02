@@ -1,0 +1,23 @@
+@import "../../style/mixin";
+
+.broke-main-content {
+  padding: 20px;
+  @include font(40px,#555);
+  p{
+    margin-bottom: 10px;
+    span{
+      @include font(50px, $base-red);
+    }
+  }
+  .type-num{
+    display:inline-block;
+    input{
+      height:60px;
+      width:32%;
+      padding-left: 18px;
+      border:none;
+      font-size:30px;
+      background-color:#ccc;
+    }
+  }
+}
